@@ -1,0 +1,17 @@
+{
+  "name": "site-ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map",
+    "prettier": "prettier --write index.html sass"
+  },
+  "keywords": [],
+  "author": "boysers",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1"
+  }
+}
