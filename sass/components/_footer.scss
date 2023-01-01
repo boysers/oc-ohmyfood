@@ -1,0 +1,40 @@
+.footer {
+  padding: 1.6rem 1.6rem 0.5rem;
+  background-color: $color-grey-black;
+
+  &__logo {
+    font-family: 'Shrikhand', cursive;
+    display: block;
+    font: {
+      size: 18px;
+      weight: 400;
+    }
+    color: $btn-color-text;
+  }
+
+  &-navbar {
+    font: {
+      size: 16px;
+      weight: 500;
+    }
+    margin: 1rem 0;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+
+    &__link {
+      display: block;
+      color: $btn-color-text;
+
+      .fa-solid {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
+}

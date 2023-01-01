@@ -1,0 +1,100 @@
+$size-icon: scale(1.1);
+
+.card {
+  border-radius: 15px;
+  background-color: $color-background;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  position: relative;
+
+  transform: scale(1);
+
+  transition: box-shadow 200ms, transform 500ms;
+
+  &:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.009);
+  }
+
+  &:not(&:not(&--new))::after {
+    position: absolute;
+    content: 'Nouveau';
+    top: 0;
+    right: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    color: $color-green-text;
+    background-color: $color-green-background;
+    font: {
+      size: 14px;
+      weight: 500;
+    }
+    margin: 1rem;
+    padding: 8px 12px;
+    border-radius: 2px;
+  }
+
+  &__picture {
+    height: 180px;
+  }
+
+  &-info {
+    margin: 12px;
+    position: relative;
+
+    &__icon {
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      font-size: 20px;
+
+      .fa-regular {
+        background: $color-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+
+        animation: out 250ms ease-out;
+
+        &:hover {
+          font-weight: 700;
+          background: linear-gradient(
+            $color-primary -5.2%,
+            $color-secondary 110.74%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          animation: in 275ms ease-in;
+
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__district {
+      margin-top: 5px;
+    }
+  }
+}
+
+@keyframes in {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: $size-icon;
+  }
+}
+
+@keyframes out {
+  0% {
+    opacity: 1;
+    transform: $size-icon;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

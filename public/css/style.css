@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -317,11 +317,292 @@ template {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #101010;
+}
+a:active:not(.button) {
+  color: #9356dc;
+}
+
+address {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  color: #101010;
+  background-color: #ffffff;
 }
 
 h1,
-h2 {
+h2:not(.home-header h2) {
   font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon {
+  color: #353535;
+}
+.icon--color {
+  color: #9356dc;
+}
+
+.home-header-location {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+.home-header-location__icon {
+  margin-right: 16px;
+}
+.home-header-presentation {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 0;
+  background-color: #f6f6f6;
+}
+.home-header-presentation__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.home-header-presentation__paragraph {
+  margin: 16px 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+.home-selection, .home-restaurants {
+  padding: 3rem 1.5rem;
+}
+.home-selection__title {
+  font-size: 24px;
+}
+.home-selection-item {
+  background-color: #f6f6f6;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  border-radius: 20px;
+  position: relative;
+}
+.home-selection-item__icon {
+  font-size: 20px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+}
+.home-selection-item__id {
+  position: absolute;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: calc(-24px * 0.5);
+  color: #ffffff;
+  font-size: 14.25px;
+}
+.home-selection-item__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.home-restaurants {
+  background-color: #f6f6f6;
+}
+.home-restaurants__title {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+.home-restaurants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.header__btn-return {
+  position: absolute;
+  left: 0;
+  margin-left: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: box-shadow 250ms 100ms;
+}
+.header__btn-return--disable {
+  display: none;
+}
+.header__btn-return:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.header__btn-return:hover .fa-solid {
+  transition: color 150ms;
+  color: #9356dc;
+}
+.header__title {
+  font-size: 30px;
+}
+
+.footer {
+  padding: 1.6rem 1.6rem 0.5rem;
+  background-color: #353535;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.footer-navbar {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-navbar__link {
+  display: block;
+  color: #ffffff;
+}
+.footer-navbar__link .fa-solid {
+  margin-right: 10px;
+}
+.footer-navbar__link:hover {
+  color: #99e2d0;
+}
+
+.button {
+  display: inline-block;
+  color: #ffffff;
+  padding: 13px 16px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
+  transition: filter 250ms, box-shadow 250ms;
+}
+.button:hover {
+  filter: brightness(115%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transform: scale(1);
+  transition: box-shadow 200ms, transform 500ms;
+}
+.card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.009);
+}
+.card:not(.card:not(.card--new))::after {
+  position: absolute;
+  content: "Nouveau";
+  top: 0;
+  right: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  color: #008766;
+  background-color: #99e2d0;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 1rem;
+  padding: 8px 12px;
+  border-radius: 2px;
+}
+.card__picture {
+  height: 180px;
+}
+.card-info {
+  margin: 12px;
+  position: relative;
+}
+.card-info__icon {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  font-size: 20px;
+}
+.card-info__icon .fa-regular {
+  background: #101010;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  animation: out 250ms ease-out;
+}
+.card-info__icon .fa-regular:hover {
+  font-weight: 700;
+  background: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: in 275ms ease-in;
+  transform: scale(1.1);
+}
+.card-info__district {
+  margin-top: 5px;
+}
+
+@keyframes in {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@keyframes out {
+  0% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

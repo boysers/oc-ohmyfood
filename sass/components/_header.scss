@@ -1,0 +1,45 @@
+$size-btn: 50px;
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+  &__btn-return {
+    position: absolute;
+    left: 0;
+    margin-left: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    width: $size-btn;
+    height: $size-btn;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    transition: box-shadow 250ms 100ms;
+
+    &--disable {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+      & .fa-solid {
+        transition: color 150ms;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+}

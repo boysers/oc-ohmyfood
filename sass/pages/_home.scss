@@ -1,0 +1,101 @@
+.home {
+  &-header {
+    &-location {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: $color-grey-light;
+
+      &__icon {
+        margin-right: 16px;
+      }
+    }
+
+    &-presentation {
+      text-align: center;
+      padding: 3rem 2rem;
+      margin: 0;
+      background-color: $color-background-secondary;
+
+      &__title {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &__paragraph {
+        margin: 16px 0;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &-selection,
+  &-restaurants {
+    padding: 3rem 1.5rem;
+  }
+
+  &-selection {
+    &__title {
+      font-size: 24px;
+    }
+
+    &-item {
+      background-color: $color-background-secondary;
+      margin: 24px 0;
+      display: flex;
+      align-items: center;
+      height: 72px;
+
+      border-radius: 20px;
+
+      position: relative;
+
+      &__icon {
+        font-size: 20px;
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        padding: 0 30px;
+      }
+
+      &__id {
+        $size: 24px;
+
+        position: absolute;
+        background-color: $color-primary;
+        border-radius: 50%;
+        width: $size;
+        height: $size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: calc(-#{$size} * 0.5);
+        color: $btn-color-text;
+        font-size: 14.25px;
+      }
+
+      &__title {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-restaurants {
+    background-color: $color-background-secondary;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 1.5rem;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}

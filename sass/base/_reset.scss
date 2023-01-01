@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: $color-text;
+
+  &:active:not(.button) {
+    color: $color-primary;
+  }
+}
+
+address {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+}
