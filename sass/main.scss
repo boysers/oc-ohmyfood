@@ -1,3 +1,5 @@
+// Main Sass input file
+
 // Utils
 @import 'utils/variables';
 
@@ -7,11 +9,13 @@
 @import 'base/reset';
 @import 'base/typography';
 
-// Pages
-@import 'pages/home';
-
 // Components
-@import 'components/header';
-@import 'components/footer';
 @import 'components/button';
 @import 'components/card';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/home';
