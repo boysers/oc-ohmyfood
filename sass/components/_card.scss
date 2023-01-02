@@ -35,7 +35,7 @@ $size-icon: scale(1.1);
   }
 
   &__picture {
-    height: 180px;
+    height: 200px;
   }
 
   &-info {
@@ -72,8 +72,19 @@ $size-icon: scale(1.1);
       }
     }
 
+    &__title {
+      font: {
+        size: 18px;
+        weight: 700;
+      }
+    }
+
     &__district {
       margin-top: 5px;
+      font: {
+        size: 17px;
+        weight: 300;
+      }
     }
   }
 }

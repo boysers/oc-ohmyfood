@@ -19,9 +19,10 @@
       margin: 0;
       background-color: $color-background-secondary;
 
-      &__title {
-        font-size: 24px;
-        font-weight: 700;
+      @include desktop-only {
+        &__title {
+          font-size: 40px;
+        }
       }
 
       &__paragraph {
@@ -35,51 +36,67 @@
   &-selection,
   &-restaurants {
     padding: 3rem 1.5rem;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &__container {
+      @include desktop-container;
+    }
   }
 
   &-selection {
-    &__title {
-      font-size: 24px;
-    }
-
-    &-item {
-      background-color: $color-background-secondary;
-      margin: 24px 0;
-      display: flex;
-      align-items: center;
-      height: 72px;
-
-      border-radius: 20px;
-
-      position: relative;
-
-      &__icon {
-        font-size: 20px;
-        width: 24px;
+    &-list {
+      @include desktop-only {
         display: flex;
-        justify-content: center;
-        padding: 0 30px;
+        gap: 1.5rem;
       }
 
-      &__id {
+      &-item {
         $size: 24px;
 
-        position: absolute;
-        background-color: $color-primary;
-        border-radius: 50%;
-        width: $size;
-        height: $size;
+        background-color: $color-background-secondary;
+        margin: 24px 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        left: calc(-#{$size} * 0.5);
-        color: $btn-color-text;
-        font-size: 14.25px;
-      }
+        height: 72px;
+        width: 100%;
 
-      &__title {
-        font-size: 16px;
-        font-weight: 500;
+        border-radius: 20px;
+
+        position: relative;
+
+        &__icon {
+          $padding: 30px;
+
+          font-size: 20px;
+          width: $size;
+          display: flex;
+          justify-content: center;
+          padding: 0 $padding;
+          padding-left: calc(($size * 0.5) + $padding);
+        }
+
+        &__id {
+          position: absolute;
+          background-color: $color-primary;
+          border-radius: 50%;
+          width: $size;
+          height: $size;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: calc(-#{$size} * 0.5);
+          color: $btn-color-text;
+          font-size: 14.25px;
+        }
+
+        &__title {
+          font-size: 16px;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -96,6 +113,12 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      @include desktop-only {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
     }
   }
 }

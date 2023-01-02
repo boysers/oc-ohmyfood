@@ -2,6 +2,20 @@
   padding: 1.6rem 1.6rem 0.5rem;
   background-color: $color-grey-black;
 
+  @include desktop-only {
+    padding: 0;
+    padding: 2rem;
+  }
+
+  &__container {
+    @include desktop-container {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 1.9rem;
+    }
+  }
+
   &__logo {
     font-family: 'Shrikhand', cursive;
     display: block;
@@ -23,6 +37,11 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
+
+    @include desktop-only {
+      flex-direction: row;
+      gap: 1rem;
+    }
 
     &__link {
       display: block;

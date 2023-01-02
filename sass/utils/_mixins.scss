@@ -1,0 +1,13 @@
+@mixin desktop-container {
+  @media screen and (min-width: $desktop) {
+    max-width: 1024px;
+    margin: 0 auto;
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
