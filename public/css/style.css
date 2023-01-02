@@ -388,14 +388,8 @@ img {
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   position: relative;
-  transform: scale(1);
-  transition: box-shadow 200ms, transform 500ms;
-}
-.card:hover {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.009);
+  overflow: hidden;
 }
 .card:not(.card:not(.card--new))::after {
   position: absolute;

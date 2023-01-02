@@ -4,18 +4,8 @@ $size-icon: scale(1.1);
   border-radius: 15px;
   background-color: $color-background;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-
   position: relative;
-
-  transform: scale(1);
-
-  transition: box-shadow 200ms, transform 500ms;
-
-  &:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.009);
-  }
+  overflow: hidden;
 
   &:not(&:not(&--new))::after {
     position: absolute;
