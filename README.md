@@ -4,9 +4,14 @@ Une démo du site [boysers.github.io/site-ohmyfood/](https://boysers.github.io/s
 
 ## Screenshots
 
-...
+### Home page mobile and desktop :
 
-<!-- ![homepage](screenshots/screen.jpg) -->
+![screen homepage mobile and desktop](screenshots/screen_homepage_mobile_and_desktop.jpg)
+
+
+<!-- ### Example menu restaurant page mobile and desktop : -->
+
+<!-- ![example screen menu restaurant mobile and desktop](screenshots/screen.jpg) -->
 
 # Ressources
 
