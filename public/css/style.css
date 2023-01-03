@@ -367,8 +367,11 @@ img {
 .icon--color {
   color: #9356dc;
 }
+.icon--white {
+  color: #ffffff;
+}
 
-.button {
+.button__primary {
   display: inline-block;
   color: #ffffff;
   padding: 1rem 1.5rem;
@@ -379,9 +382,28 @@ img {
   background-image: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
   transition: filter 250ms, box-shadow 250ms;
 }
-.button:hover {
+.button__primary:hover {
   filter: brightness(115%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+.button__fav {
+  font-size: 20px;
+}
+.button__fav .fa-heart {
+  background: #101010;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  animation: out 250ms ease-out;
+}
+.button__fav .fa-heart:hover {
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: in 275ms ease-in;
+  transform: scale(1.1);
 }
 
 .card {
@@ -416,22 +438,6 @@ img {
   position: absolute;
   top: 6px;
   right: 12px;
-  font-size: 20px;
-}
-.card-info__icon .fa-regular {
-  background: #101010;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 400;
-  animation: out 250ms ease-out;
-}
-.card-info__icon .fa-regular:hover {
-  font-weight: 700;
-  background: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: in 275ms ease-in;
-  transform: scale(1.1);
 }
 .card-info__title {
   font-size: 18px;
@@ -462,6 +468,68 @@ img {
     transform: scale(1);
   }
 }
+.title__menu {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 8px;
+}
+.title__menu::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 40px;
+  background-color: #99e2d0;
+}
+
+.menu-item {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.menu-item__content {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  flex: 1;
+  overflow: hidden;
+}
+.menu-item__title, .menu-item__description {
+  height: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-item__title {
+  margin-bottom: 5px;
+}
+.menu-item__price {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 1rem 1rem 0;
+}
+.menu-item__confirm {
+  width: 0px;
+  opacity: 0;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  transition: width 700ms, opacity 400ms;
+}
+.menu-item:hover {
+  cursor: pointer;
+}
+.menu-item:hover .menu-item__confirm {
+  width: 60px;
+  opacity: 1;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -600,7 +668,9 @@ img {
   align-items: center;
   height: 72px;
   width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  cursor: pointer;
   position: relative;
 }
 .home-selection-list-item__icon {
@@ -646,4 +716,38 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+}
+
+.restaurant__picture {
+  max-height: 32rem;
+}
+.restaurant__container {
+  padding: 2rem 1rem;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  max-width: 1055px;
+  margin: 0 auto;
+  margin-top: -4rem;
+}
+.restaurant-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurant-header__title {
+  margin-right: 24px;
+}
+.restaurant-main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.restaurant-main-menu {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.restaurant-main-menu .title__menu {
+  width: 100%;
 }

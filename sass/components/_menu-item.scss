@@ -1,0 +1,56 @@
+.menu-item {
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  background-color: $color-background;
+
+  &__content {
+    margin: 1rem 0;
+    padding-left: 1rem;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__title,
+  &__description {
+    height: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 1rem 1rem 0;
+  }
+
+  &__confirm {
+    width: 0px;
+    opacity: 0;
+
+    background-color: $color-green-background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    transition: width 700ms, opacity 400ms;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .menu-item__confirm {
+      width: 60px;
+      opacity: 1;
+    }
+  }
+}

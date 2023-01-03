@@ -18,7 +18,8 @@
       <div class="header__btn-return--disable">
         <i class="fa-solid fa-arrow-left icon"></i>
       </div>
-      <a href="/"><h1 class="header__title">ohmyfood</h1></a>
+
+      <a href="./"><h1 class="header__title">ohmyfood</h1></a>
     </header>
 
     <main class="home">
@@ -36,7 +37,7 @@
           <p class="home-header-presentation__paragraph">
             Découvrez des restaurants d’exception, sélectionnés par nos soins.
           </p>
-          <a href="#" class="button">Explorer nos restaurants</a>
+          <a href="#restaurants" class="button__primary">Explorer nos restaurants</a>
         </div>
       </section>
 
@@ -50,34 +51,40 @@
               <div class="home-selection-list-item__icon">
                 <i class="fa-solid fa-mobile-screen icon"></i>
               </div>
-              <h4 class="home-selection-list-item__title">Choisissez un restaurant</h4>
+              <h4 class="home-selection-list-item__title">
+                Choisissez un restaurant
+              </h4>
             </article>
-  
+
             <article class="home-selection-list-item">
               <span class="home-selection-list-item__id">2</span>
               <div class="home-selection-list-item__icon">
                 <i class="fa-solid fa-list icon"></i>
               </div>
-              <h4 class="home-selection-list-item__title">Composez votre menu</h4>
+              <h4 class="home-selection-list-item__title">
+                Composez votre menu
+              </h4>
             </article>
-  
+
             <article class="home-selection-list-item">
               <span class="home-selection-list-item__id">3</span>
               <div class="home-selection-list-item__icon">
                 <i class="fa-solid fa-store icon--color"></i>
               </div>
-              <h4 class="home-selection-list-item__title">Dégustez au restaurant</h4>
+              <h4 class="home-selection-list-item__title">
+                Dégustez au restaurant
+              </h4>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="home-restaurants">
+      <section class="home-restaurants" id="restaurants">
         <div class="home-restaurants__container">
           <h3 class="home-restaurants__title">Restaurants</h3>
 
           <div class="home-restaurants-list">
-            <a href="#" class="home-restaurants-list__item">
+            <a href="./restaurants/la-palette-du-gout.html" class="home-restaurants-list__item">
               <article class="card card--new">
                 <img
                   src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -85,7 +92,7 @@
                   class="card__picture"
                 />
                 <div class="card-info">
-                  <div class="card-info__icon">
+                  <div class="card-info__icon button__fav">
                     <i class="fa-regular fa-heart"></i>
                   </div>
                   <h4 class="card-info__title">La palette du goût</h4>
@@ -94,7 +101,7 @@
               </article>
             </a>
 
-            <a href="#" class="home-restaurants-list__item">
+            <a href="./restaurants/la-note-enchantee.html" class="home-restaurants-list__item">
               <article class="card card--new">
                 <img
                   src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -102,7 +109,7 @@
                   class="card__picture"
                 />
                 <div class="card-info">
-                  <div class="card-info__icon">
+                  <div class="card-info__icon button__fav">
                     <i class="fa-regular fa-heart"></i>
                   </div>
                   <h4 class="card-info__title">La note enchantée</h4>
@@ -111,7 +118,7 @@
               </article>
             </a>
 
-            <a href="#" class="home-restaurants-list__item">
+            <a href="./restaurants/a-la-francaise.html" class="home-restaurants-list__item">
               <article class="card card">
                 <img
                   src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -119,7 +126,7 @@
                   class="card__picture"
                 />
                 <div class="card-info">
-                  <div class="card-info__icon">
+                  <div class="card-info__icon button__fav">
                     <i class="fa-regular fa-heart"></i>
                   </div>
                   <h4 class="card-info__title">À la française</h4>
@@ -128,7 +135,7 @@
               </article>
             </a>
 
-            <a href="#" class="home-restaurants-list__item">
+            <a href="./restaurants/le-délice-des-sens.html" class="home-restaurants-list__item">
               <article class="card card">
                 <img
                   src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -136,7 +143,7 @@
                   class="card__picture"
                 />
                 <div class="card-info">
-                  <div class="card-info__icon">
+                  <div class="card-info__icon button__fav">
                     <i class="fa-regular fa-heart"></i>
                   </div>
                   <h4 class="card-info__title">Le délice des sens</h4>
@@ -151,7 +158,7 @@
 
     <footer class="footer">
       <div class="footer__container">
-        <a href="/" class="footer__logo">ohmyfood</a>
+        <a href="./" class="footer__logo">ohmyfood</a>
 
         <nav class="footer-navbar">
           <a class="footer-navbar__link" href="#"

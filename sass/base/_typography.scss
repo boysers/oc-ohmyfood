@@ -34,4 +34,8 @@ img {
   &--color {
     color: $color-primary;
   }
+
+  &--white {
+    color: $btn-color-text;
+  }
 }

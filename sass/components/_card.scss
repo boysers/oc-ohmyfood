@@ -36,30 +36,6 @@ $size-icon: scale(1.1);
       position: absolute;
       top: 6px;
       right: 12px;
-      font-size: 20px;
-
-      .fa-regular {
-        background: $color-text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 400;
-
-        animation: out 250ms ease-out;
-
-        &:hover {
-          font-weight: 700;
-          background: linear-gradient(
-            $color-primary -5.2%,
-            $color-secondary 110.74%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-
-          animation: in 275ms ease-in;
-
-          transform: scale(1.1);
-        }
-      }
     }
 
     &__title {
