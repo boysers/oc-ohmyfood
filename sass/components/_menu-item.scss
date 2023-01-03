@@ -14,7 +14,7 @@
 
   @for $number from 0 through 9 {
     &--delay-#{$number} {
-      animation-delay:  #{$number/10}s;
+      animation-delay: #{calc($number/10)}s;
     }
   }
 
