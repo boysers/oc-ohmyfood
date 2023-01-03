@@ -320,15 +320,23 @@ template {
 a {
   text-decoration: none;
   color: #101010;
+  transition: color 200ms ease-in-out;
 }
-a:active:not(.button) {
-  color: #9356dc;
+a:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
+  color: #99e2d0;
+}
+a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
+  color: #99e2d0;
 }
 
 address {
   font-style: normal;
   font-size: 16px;
   font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -379,6 +387,9 @@ img {
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  min-width: 186px;
+  text-align: center;
   background-image: linear-gradient(#9356dc -5.2%, #ff79da 110.74%);
   transition: filter 250ms, box-shadow 250ms;
 }
@@ -506,11 +517,19 @@ img {
 }
 .menu-item__title {
   margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu-item__description {
+  font-weight: 400;
+  font-size: 16px;
 }
 .menu-item__price {
   display: flex;
   align-items: flex-end;
   margin: 0 1rem 1rem 0;
+  font-weight: 700;
+  font-size: 15px;
 }
 .menu-item__confirm {
   width: 0px;
@@ -611,9 +630,6 @@ img {
 }
 .footer-navbar__link .fa-solid {
   margin-right: 10px;
-}
-.footer-navbar__link:hover {
-  color: #99e2d0;
 }
 
 .home-header-location {
@@ -750,4 +766,8 @@ img {
 }
 .restaurant-main-menu .title__menu {
   width: 100%;
+}
+.restaurant-main__btn {
+  display: flex;
+  justify-content: center;
 }
