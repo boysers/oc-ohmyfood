@@ -7,10 +7,14 @@
   justify-content: center;
   align-items: center;
 
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   animation-name: loader;
   animation-duration: 3s;
+
+  overflow: hidden;
 
   z-index: -1;
   opacity: 0;
@@ -85,11 +89,11 @@
 
 @keyframes loader {
   from {
-    opacity: 1;
+    opacity: 0.92;
     z-index: 1;
   }
   90% {
-    opacity: 1;
+    opacity: 0.92;
   }
   to {
     opacity: 0;

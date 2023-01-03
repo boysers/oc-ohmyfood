@@ -6,7 +6,7 @@ $size-btn: 50px;
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
+  background: $color-background;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
   &__btn-return {

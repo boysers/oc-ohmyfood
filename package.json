@@ -1,16 +1,20 @@
 {
   "name": "site-ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "projet 4 site ohmyfood",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
     "prettier": "prettier --write index.html sass"
   },
-  "keywords": [],
+  "browserslist": "last 4 versions",
   "author": "boysers",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
     "prettier": "^2.8.1",
     "sass": "^1.57.1"
   }

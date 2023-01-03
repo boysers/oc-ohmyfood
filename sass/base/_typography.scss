@@ -27,10 +27,16 @@ h3 {
   font-weight: 700;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+a {
+  transition: color 200ms ease-in-out;
+
+  &:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
+    color: $color-tertiary;
+  }
+
+  &:active:not(.button__primary, .logo, .home-restaurants-list__item) {
+    color: $color-tertiary;
+  }
 }
 
 .icon {

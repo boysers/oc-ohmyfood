@@ -2,9 +2,21 @@
   display: flex;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  background-color: $color-background;
   overflow: hidden;
 
-  background-color: $color-background;
+  animation-name: slide;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+
+  transform: translateX(0);
+  animation-fill-mode: both;
+
+  @for $number from 0 through 9 {
+    &--delay-#{$number} {
+      animation-delay:  #{$number/10}s;
+    }
+  }
 
   &__content {
     margin: 1rem 0;
@@ -67,5 +79,14 @@
       width: 60px;
       opacity: 1;
     }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

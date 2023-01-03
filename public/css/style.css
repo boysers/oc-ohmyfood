@@ -320,13 +320,12 @@ template {
 a {
   text-decoration: none;
   color: #101010;
-  transition: color 200ms ease-in-out;
 }
-a:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
-  color: #99e2d0;
-}
-a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
-  color: #99e2d0;
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 address {
@@ -364,10 +363,14 @@ h3 {
   font-weight: 700;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+a {
+  transition: color 200ms ease-in-out;
+}
+a:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
+  color: #99e2d0;
+}
+a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
+  color: #99e2d0;
 }
 
 .icon {
@@ -501,8 +504,43 @@ img {
   display: flex;
   border-radius: 15px;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   background-color: #ffffff;
+  overflow: hidden;
+  animation-name: slide;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  transform: translateX(0);
+  animation-fill-mode: both;
+}
+.menu-item--delay-0 {
+  animation-delay: 0s;
+}
+.menu-item--delay-1 {
+  animation-delay: 0.1s;
+}
+.menu-item--delay-2 {
+  animation-delay: 0.2s;
+}
+.menu-item--delay-3 {
+  animation-delay: 0.3s;
+}
+.menu-item--delay-4 {
+  animation-delay: 0.4s;
+}
+.menu-item--delay-5 {
+  animation-delay: 0.5s;
+}
+.menu-item--delay-6 {
+  animation-delay: 0.6s;
+}
+.menu-item--delay-7 {
+  animation-delay: 0.7s;
+}
+.menu-item--delay-8 {
+  animation-delay: 0.8s;
+}
+.menu-item--delay-9 {
+  animation-delay: 0.9s;
 }
 .menu-item__content {
   margin: 1rem 0;
@@ -550,6 +588,14 @@ img {
   opacity: 1;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .loader {
   width: 100%;
   height: 100vh;
@@ -557,9 +603,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   animation-name: loader;
   animation-duration: 3s;
+  overflow: hidden;
   z-index: -1;
   opacity: 0;
 }
@@ -912,11 +961,11 @@ img {
 }
 @keyframes loader {
   from {
-    opacity: 1;
+    opacity: 0.92;
     z-index: 1;
   }
   90% {
-    opacity: 1;
+    opacity: 0.92;
   }
   to {
     opacity: 0;
@@ -1119,6 +1168,7 @@ img {
   max-width: 1055px;
   margin: 0 auto;
   margin-top: -4rem;
+  overflow: hidden;
 }
 .restaurant-header {
   display: flex;

@@ -6,17 +6,13 @@
 
 a {
   text-decoration: none;
-
   color: $color-text;
-  transition: color 200ms ease-in-out;
+}
 
-  &:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
-    color: $color-tertiary;
-  }
-
-  &:active:not(.button__primary, .logo, .home-restaurants-list__item) {
-    color: $color-tertiary;
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 address {
