@@ -1,4 +1,6 @@
+/* Buttons */
 .button {
+  // Bouton Principal
   &__primary {
     display: inline-block;
     color: $btn-color-text;
@@ -24,6 +26,7 @@
     }
   }
 
+  // Bouton favoris
   &__fav {
     font-size: 20px;
 

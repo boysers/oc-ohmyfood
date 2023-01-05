@@ -1,3 +1,4 @@
+// Restaurant Card
 $size-icon: scale(1.1);
 
 .card {
@@ -7,6 +8,7 @@ $size-icon: scale(1.1);
   position: relative;
   overflow: hidden;
 
+  // Button Nouveau .card--new
   &:not(&:not(&--new))::after {
     position: absolute;
     content: 'Nouveau';

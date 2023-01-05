@@ -1,3 +1,14 @@
+/* Mixins */
+
+/* Media queries */
+// Pour le format bureau
+@mixin desktop-only {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Pour le format bureau mais avec une largeur max de 1024px
 @mixin desktop-container {
   @media screen and (min-width: $desktop) {
     max-width: 1024px;
@@ -6,12 +17,7 @@
   }
 }
 
-@mixin desktop-only {
-  @media screen and (min-width: $desktop) {
-    @content;
-  }
-}
-
+// Pour centrer les menus
 @mixin menu-center {
   max-width: 640px;
   margin: 0 auto;

@@ -1,3 +1,4 @@
+// Loader
 .loader {
   width: 100%;
   height: 100vh;
@@ -21,6 +22,7 @@
   // z-index: 1;
   // opacity: 1;
 
+  // Bar de progression
   &__progress {
     position: relative;
     display: flex;
@@ -35,6 +37,7 @@
     border: 5px solid $color-grey-light;
     border-radius: 12px;
 
+    // Pourcentage
     &::before {
       border-radius: 6px;
       content: '';
