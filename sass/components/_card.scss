@@ -8,10 +8,13 @@ $size-icon: scale(1.1);
   position: relative;
   overflow: hidden;
 
-  // Button Nouveau .card--new
-  &:not(&:not(&--new))::after {
+  a {
+    display: block;
+    position: relative;
+  }
+
+  .card__new {
     position: absolute;
-    content: 'Nouveau';
     top: 0;
     right: 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -24,21 +27,28 @@ $size-icon: scale(1.1);
     margin: 1rem;
     padding: 8px 12px;
     border-radius: 2px;
+
+    &--disabled {
+      display: none;
+    }
   }
 
   &__picture {
     height: 200px;
   }
 
-  &-info {
-    margin: 12px;
-    position: relative;
+  &__icon {
+    position: absolute;
+    right: 18px;
+    bottom: 26px;
 
-    &__icon {
-      position: absolute;
-      top: 6px;
-      right: 12px;
-    }
+    z-index: 10;
+  }
+
+  &-info {
+    padding: 12px;
+    position: relative;
+    display: block;
 
     &__title {
       font: {

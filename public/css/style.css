@@ -376,10 +376,10 @@ h3 {
 a {
   transition: color 200ms ease-in-out;
 }
-a:hover:not(.button__primary, .logo, .home-restaurants-list__item) {
+a:hover:not(.button__primary, .logo, .home-restaurants-list__item, .card-info a) {
   color: hsl(165deg, 56%, 74%);
 }
-a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
+a:active:not(.button__primary, .logo, .home-restaurants-list__item, .card-info a) {
   color: hsl(165deg, 56%, 74%);
 }
 
@@ -387,6 +387,9 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   color: #353535;
 }
 .icon--color {
+  transition: color 225ms ease-in;
+}
+.icon--color:hover {
   color: #9356dc;
 }
 .icon--white {
@@ -439,9 +442,12 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   position: relative;
   overflow: hidden;
 }
-.card:not(.card:not(.card--new))::after {
+.card a {
+  display: block;
+  position: relative;
+}
+.card .card__new {
   position: absolute;
-  content: "Nouveau";
   top: 0;
   right: 0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
@@ -453,17 +459,22 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   padding: 8px 12px;
   border-radius: 2px;
 }
+.card .card__new--disabled {
+  display: none;
+}
 .card__picture {
   height: 200px;
 }
-.card-info {
-  margin: 12px;
-  position: relative;
-}
-.card-info__icon {
+.card__icon {
   position: absolute;
-  top: 6px;
-  right: 12px;
+  right: 18px;
+  bottom: 26px;
+  z-index: 10;
+}
+.card-info {
+  padding: 12px;
+  position: relative;
+  display: block;
 }
 .card-info__title {
   font-size: 18px;
@@ -973,14 +984,14 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
 @keyframes loader {
   from {
     opacity: 0.92;
-    z-index: 1;
+    z-index: 2000;
   }
   90% {
     opacity: 0.92;
   }
   to {
     opacity: 0;
-    z-index: 1;
+    z-index: 2000;
   }
 }
 /* Header */
@@ -1022,13 +1033,13 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   padding: 1.6rem 1.6rem 0.5rem;
   background-color: #353535;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer {
     padding: 0;
     padding: 2rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__container {
     max-width: 1024px;
     margin: 0 auto;
@@ -1054,7 +1065,7 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   flex-direction: column;
   gap: 8px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer-navbar {
     flex-direction: row;
     gap: 1rem;
@@ -1084,7 +1095,7 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   margin: 0;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .home-header-presentation__title {
     font-size: 40px;
   }
@@ -1101,13 +1112,13 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   font-size: 24px;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .home-selection__container, .home-restaurants__container {
     max-width: 1024px;
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .home-selection-list {
     display: flex;
     gap: 1.5rem;
@@ -1124,6 +1135,9 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
   border-radius: 20px;
   cursor: pointer;
   position: relative;
+}
+.home-selection-list-item:hover .icon--color {
+  color: #9356dc;
 }
 .home-selection-list-item__icon {
   font-size: 20px;
@@ -1167,6 +1181,20 @@ a:active:not(.button__primary, .logo, .home-restaurants-list__item) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-restaurants-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-restaurants-list__item {
+    flex: 1;
+  }
+  .home-restaurants-list__item .card__picture {
+    height: 150px;
   }
 }
 

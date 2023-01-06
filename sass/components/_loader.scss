@@ -93,13 +93,13 @@
 @keyframes loader {
   from {
     opacity: 0.92;
-    z-index: 1;
+    z-index: 2000;
   }
   90% {
     opacity: 0.92;
   }
   to {
     opacity: 0;
-    z-index: 1;
+    z-index: 2000;
   }
 }

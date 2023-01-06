@@ -68,6 +68,12 @@
         cursor: pointer;
         position: relative;
 
+        &:hover {
+          .icon--color {
+            color: $color-primary;
+          }
+        }
+
         &__icon {
           $padding: 30px;
 
@@ -114,10 +120,25 @@
       flex-direction: column;
       gap: 1.5rem;
 
-      @include desktop-only {
+      @include tablet-only {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+      }
+
+      @include desktop-only {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &__item {
+        @include desktop-only {
+          flex: 1;
+
+          .card__picture {
+            height: 150px;
+          }
+        }
       }
     }
   }
