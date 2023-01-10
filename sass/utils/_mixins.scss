@@ -19,7 +19,7 @@
 
 @mixin tablet-only {
   @media screen and (min-width: $tablet) {
-    @content
+    @content;
   }
 }
 

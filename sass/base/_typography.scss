@@ -31,11 +31,21 @@ h3 {
 a {
   transition: color 200ms ease-in-out;
 
-  &:hover:not(.button__primary, .logo, .home-restaurants-list__item, .card-info a) {
+  &:hover:not(
+      .button__primary,
+      .logo,
+      .home-restaurants-list__item,
+      .card-info a
+    ) {
     color: $color-tertiary;
   }
 
-  &:active:not(.button__primary, .logo, .home-restaurants-list__item, .card-info a) {
+  &:active:not(
+      .button__primary,
+      .logo,
+      .home-restaurants-list__item,
+      .card-info a
+    ) {
     color: $color-tertiary;
   }
 }
