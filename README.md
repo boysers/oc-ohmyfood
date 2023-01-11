@@ -1,6 +1,6 @@
-# site Ohmyfood
+# OC Ohmyfood
 
-Une démo du site [boysers.github.io/site-ohmyfood/](https://boysers.github.io/site-ohmyfood/) .
+Une démo du site [boysers.github.io/oc-ohmyfood](https://boysers.github.io/oc-ohmyfood/) .
 
 ## Screenshots
 
