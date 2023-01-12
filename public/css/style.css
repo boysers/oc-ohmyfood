@@ -425,10 +425,9 @@ a:active:not(.button__primary,
   font-size: 20px;
 }
 .button__fav .fa-heart {
+  font-weight: 400;
   background: #101010;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 400;
   animation: out 250ms ease-out;
 }
 .button__fav .fa-heart:hover {
@@ -441,6 +440,25 @@ a:active:not(.button__primary,
   transform: scale(1.1);
 }
 
+@keyframes in {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@keyframes out {
+  0% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .card {
   border-radius: 15px;
   background-color: #ffffff;
@@ -492,25 +510,6 @@ a:active:not(.button__primary,
   font-weight: 300;
 }
 
-@keyframes in {
-  0% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-@keyframes out {
-  0% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .title__menu {
   text-transform: uppercase;
   font-weight: 300;

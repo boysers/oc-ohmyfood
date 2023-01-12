@@ -1,6 +1,4 @@
 // Restaurant Card
-$size-icon: scale(1.1);
-
 .card {
   border-radius: 15px;
   background-color: $color-background;
@@ -64,26 +62,5 @@ $size-icon: scale(1.1);
         weight: 300;
       }
     }
-  }
-}
-
-@keyframes in {
-  0% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: $size-icon;
-  }
-}
-
-@keyframes out {
-  0% {
-    opacity: 1;
-    transform: $size-icon;
-  }
-  100% {
-    transform: scale(1);
   }
 }

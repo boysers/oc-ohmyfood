@@ -13,7 +13,7 @@ Une démo du site [boysers.github.io/oc-ohmyfood](https://boysers.github.io/oc-o
 
 <!-- ![example screen menu restaurant mobile and desktop](screenshots/screen.jpg) -->
 
-# Ressources
+## Ressources
 
 ### Découpage de la maquette :
 

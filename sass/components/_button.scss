@@ -31,10 +31,9 @@
     font-size: 20px;
 
     .fa-heart {
+      font-weight: 400;
       background: $color-text;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 400;
 
       animation: out 250ms ease-out;
 
@@ -53,5 +52,28 @@
         transform: scale(1.1);
       }
     }
+  }
+}
+
+$size-icon: scale(1.1);
+
+@keyframes in {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: $size-icon;
+  }
+}
+
+@keyframes out {
+  0% {
+    opacity: 1;
+    transform: $size-icon;
+  }
+  100% {
+    transform: scale(1);
   }
 }
