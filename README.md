@@ -9,9 +9,9 @@ Une démo du site [boysers.github.io/oc-ohmyfood](https://boysers.github.io/oc-o
 ![screen homepage mobile and desktop](screenshots/screen_homepage_mobile_and_desktop.jpg)
 
 
-<!-- ### Example menu restaurant page mobile and desktop : -->
+### Menu Restaurant page mobile and desktop :
 
-<!-- ![example screen menu restaurant mobile and desktop](screenshots/screen.jpg) -->
+![example screen menu restaurant mobile and desktop](screenshots/screen_menu_restaurant_mobile_and_desktop.jpg)
 
 ## Ressources
 
