@@ -19,6 +19,8 @@
       margin: 0;
       background-color: $color-background-secondary;
 
+
+
       @include desktop-only {
         &__title {
           font-size: 40px;
@@ -56,6 +58,10 @@
 
       &-item {
         $size: 24px;
+
+        &:hover {
+          background-color: #f5edff;
+        }
 
         background-color: $color-background-secondary;
         margin: 24px 0;

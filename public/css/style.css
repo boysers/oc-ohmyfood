@@ -1141,6 +1141,9 @@ a:active:not(.button__primary,
   cursor: pointer;
   position: relative;
 }
+.home-selection-list-item:hover {
+  background-color: #f5edff;
+}
 .home-selection-list-item:hover .icon--color {
   color: #9356dc;
 }
