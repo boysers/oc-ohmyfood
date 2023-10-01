@@ -133,8 +133,10 @@
       }
 
       @include desktop-only {
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
+        column-gap: 100px;
+        row-gap: 50px;
       }
 
       &__item {

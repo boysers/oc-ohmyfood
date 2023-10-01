@@ -3,15 +3,8 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Le délice des sens - Ohmyfood</title>
-
-    <!-- Style Développement -->
-    <!-- <link rel="stylesheet" href="../public/css/style.css" > -->
-
-    <!-- Style Production -->
-    <link rel="stylesheet" href="../public/css/prefixed/style.css" >
-
-    <!-- Font Awesome -->
+    <title>La palette du goût - Ohmyfood</title>
+    <link rel="stylesheet" href="../sass/main.scss" >
     <script
       src="https://kit.fontawesome.com/4508a34d59.js"
       crossorigin="anonymous"
@@ -26,13 +19,13 @@
       <a href=".././" class="logo"><h1 class="header__title">ohmyfood</h1></a>
     </header><!-- .header -->
 
-    <!-- Page du Restaurant: Le délice des sens -->
+    <!-- Page du Restaurant: La palette du goût -->
     <main>
       <!-- Article restaurant -->
       <article class="restaurant">
         <img
-          src="../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-          alt="photo du restaurant Le délice des sens"
+          src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt="photo du restaurant La palette du goût"
           class="restaurant__picture"
         >
 
@@ -40,7 +33,7 @@
         <div class="restaurant__container">
           <!-- Nom du restaurant -->
           <div class="restaurant-header">
-            <h2 class="restaurant-header__title">Le délice des sens</h2>
+            <h2 class="restaurant-header__title">La palette du goût</h2>
 
             <div class="restaurant-header__icon button__fav">
               <i class="fa-regular fa-heart"></i>
@@ -55,8 +48,8 @@
 
               <section class="menu-item menu-item--delay-0">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Tartare de thon</h4>
-                  <p class="menu-item__description">Assaisonné au yuzu</p>
+                  <h4 class="menu-item__title">Fricassée d'escargots</h4>
+                  <p class="menu-item__description">Au piment d'Espelette</p>
                 </div>
                 <p class="menu-item__price">25€</p>
                 <div class="menu-item__confirm">
@@ -66,11 +59,9 @@
 
               <section class="menu-item menu-item--delay-1">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">
-                    Bouchée de homard croustillant
-                  </h4>
+                  <h4 class="menu-item__title">Foie gras de canard mi-cuit</h4>
                   <p class="menu-item__description">
-                    Et sa farandole de petits légumes
+                    Et ses copeaux de truffe noire
                   </p>
                 </div>
                 <p class="menu-item__price">35€</p>
@@ -81,8 +72,10 @@
 
               <section class="menu-item menu-item--delay-2">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Velouté de cèpes</h4>
-                  <p class="menu-item__description">Aux truffes</p>
+                  <h4 class="menu-item__title">Œuf au plat</h4>
+                  <p class="menu-item__description">
+                    Assaisonné à la truffe sur lit de caviar
+                  </p>
                 </div>
                 <p class="menu-item__price">20€</p>
                 <div class="menu-item__confirm">
@@ -97,10 +90,10 @@
 
               <section class="menu-item menu-item--delay-3">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">
-                    Poulet rôti aux herbes de Provence
-                  </h4>
-                  <p class="menu-item__description">Et sa crème de truffe</p>
+                  <h4 class="menu-item__title">Filet de bœuf aux herbes</h4>
+                  <p class="menu-item__description">
+                    Accompagné de sa ribambelle de légumes
+                  </p>
                 </div>
                 <p class="menu-item__price">40€</p>
                 <div class="menu-item__confirm">
@@ -110,8 +103,10 @@
 
               <section class="menu-item menu-item--delay-4">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Langouste rôtie</h4>
-                  <p class="menu-item__description">Et ses légumes de saison</p>
+                  <h4 class="menu-item__title">Parmentier de queue de bœuf</h4>
+                  <p class="menu-item__description">
+                    À la truffe noire sur sa purée de panais
+                  </p>
                 </div>
                 <p class="menu-item__price">35€</p>
                 <div class="menu-item__confirm">
@@ -121,8 +116,8 @@
 
               <section class="menu-item menu-item--delay-5">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Côte de bœuf Angus</h4>
-                  <p class="menu-item__description">Et sa purée de panais</p>
+                  <h4 class="menu-item__title">Filet de turbot</h4>
+                  <p class="menu-item__description">Aux agrumes</p>
                 </div>
                 <p class="menu-item__price">44€</p>
                 <div class="menu-item__confirm">
@@ -137,8 +132,8 @@
 
               <section class="menu-item menu-item--delay-6">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Farandole de desserts</h4>
-                  <p class="menu-item__description">Du chef</p>
+                  <h4 class="menu-item__title">Paris-Brest</h4>
+                  <p class="menu-item__description">Revisité</p>
                 </div>
                 <p class="menu-item__price">18€</p>
                 <div class="menu-item__confirm">
@@ -148,8 +143,12 @@
 
               <section class="menu-item menu-item--delay-7">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Crème brulée</h4>
-                  <p class="menu-item__description">Revisitée</p>
+                  <h4 class="menu-item__title">
+                    Macaron au chocolat d'exception
+                  </h4>
+                  <p class="menu-item__description">
+                    Et glace à la vanille de Madagascar
+                  </p>
                 </div>
                 <p class="menu-item__price">22€</p>
                 <div class="menu-item__confirm">
@@ -159,8 +158,10 @@
 
               <section class="menu-item menu-item--delay-8">
                 <div class="menu-item__content">
-                  <h4 class="menu-item__title">Tiramisu</h4>
-                  <p class="menu-item__description">À la noisette</p>
+                  <h4 class="menu-item__title">Mousse au chocolat</h4>
+                  <p class="menu-item__description">
+                    Au piment d'Espelette et à la truffe noire
+                  </p>
                 </div>
                 <p class="menu-item__price">23€</p>
                 <div class="menu-item__confirm">
